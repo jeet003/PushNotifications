@@ -10,8 +10,12 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.google.firebase.messaging.FirebaseMessaging;
 
@@ -24,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
     private BroadcastReceiver mRegistrationBroadcastReceiver;
     private TextView txtRegId, txtMessage;
-
+    private ToggleButton button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,23 @@ public class MainActivity extends AppCompatActivity {
 
         txtRegId = (TextView) findViewById(R.id.txt_reg_id);
         txtMessage = (TextView) findViewById(R.id.txt_push_message);
+        button=(ToggleButton)findViewById(R.id.button1);
+        button.setChecked(true);
+        button.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(!button.isChecked())
+                {
+
+                    txtRegId.setVisibility(View.INVISIBLE);
+                }
+                else if(button.isChecked())
+                {
+                    txtRegId.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
 
         mRegistrationBroadcastReceiver = new BroadcastReceiver() {
             @Override
