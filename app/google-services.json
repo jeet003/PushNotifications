@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "119880829909",
+    "firebase_url": "https://pushjeet-f1b35.firebaseio.com",
+    "project_id": "pushjeet-f1b35",
+    "storage_bucket": "pushjeet-f1b35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119880829909:android:f72aad3412d784f6",
+        "android_client_info": {
+          "package_name": "info.androidhive.firebasenotifications"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119880829909-j3kvqio7vn3og7vru5co72emh1klt8vv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj0LDBOvfF0zJs1sae8leLxyPGOf3pGn4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
